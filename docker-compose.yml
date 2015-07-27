@@ -2,13 +2,16 @@ data:
   build: docker/data
   hostname: data
   domainname: localdomain
+  volumes:
+    - /home/renato/projetos/aware/data-mount/var-lib-ckan:/var/lib/ckan
+    - /home/renato/projetos/aware/data-mount/etc-postgres:/etc/postgresql/9.3/main
+    - /home/renato/projetos/aware/data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
+    - /home/renato/projetos/aware/data-mount/solr-data:/opt/solr/example/solr/ckan/data
 
 postgres:
   build: docker/postgres
   hostname: postgres
   domainname: localdomain
-  ports:
-    - "5432:5432"
   volumes_from:
     - data
   environment:
@@ -19,36 +22,29 @@ solr:
   build: docker/solr
   hostname: solr
   domainname: localdomain
-  ports:
-    - "8983:8983"
-  volumes:
-    - ./_src/ckan/ckan/config/solr/schema.xml:/opt/solr/example/solr/ckan/conf/schema.xml
+  volumes_from:
+    - data
 
 datapusher:
   build: _service-provider/_datapusher
   hostname: datapusher
   domainname: localdomain
-  ports:
-    - "8800:8800"
 
 ckan:
   build: .
   hostname: ckan
   domainname: localdomain
-  ports:
-    - "2222:22"
-    - "5000:5000"
-    - "8080:80"
   links:
     - postgres:postgres
     - solr:solr
     - datapusher:datapusher
-  command: /sbin/my_init --enable-insecure-key
+  command: /sbin/my_init
   volumes_from:
     - data
   volumes:
+    - ./_config/custom_options.ini:/etc/ckan/default/custom_options.ini
+    - ./_config/who.ini:/etc/ckan/default/who.ini
     - ./_src:/usr/lib/ckan/default/src
-    - ./_etc/ckan/custom_options.ini:/etc/ckan/default/custom_options.ini
     - ./_etc/supervisor/conf.d:/etc/supervisor/conf.d
 
 nginx:
