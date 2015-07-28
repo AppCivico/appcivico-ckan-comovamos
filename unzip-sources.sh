@@ -19,6 +19,4 @@ cp $__dir/source-codes/datapusher-stable.zip $__dir/_service-provider/
 rm -rf $__dir/_service-provider/_datapusher
 cd $__dir/_service-provider/
 unzip -qo datapusher-stable.zip && rm datapusher-stable.zip
-mv datapusher-stable _datapusher
-cp Dockerfile _datapusher/
-
+mv datapusher-stable datapusher
