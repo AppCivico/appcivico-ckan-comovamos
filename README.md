@@ -37,6 +37,21 @@ Any modification on the right part of : should be avoided if you won't change Do
 
 > WARNING: do not use data-mount inside of this directory, or will have errors with Docker because of permissions.
 
+---
+
+## Adding a admin user
+
+after docker-compose up
+
+    docker exec -it ckandocker_ckan_1 /bin/bash
+    cd /usr/lib/ckan/default
+    virtualenv .
+    . bin/activate
+
+    paster --plugin=ckan sysadmin add admin --config=${CKAN_CONFIG}/${CONFIG_FILE}
+
+
+
 # Intro
 
 Dockerfiles, Docker-compose service definition to develop & deploy CKAN, Postgres, Solr & datapusher using Docker.
