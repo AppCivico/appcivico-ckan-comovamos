@@ -58,7 +58,7 @@ COPY _etc/ckan/ $CKAN_CONFIG/
 ONBUILD COPY _etc/ckan/ $CKAN_CONFIG/
 
 # Make config file
-RUN virtualenv $CKAN_HOME && cd $CKAN_HOME && . bin/activatepaster --plugin=ckan search-index rebuild --config=/etc/ckan/std/std.ini && $CKAN_HOME/bin/paster make-config ckan ${CKAN_CONFIG}/${CONFIG_FILE}
+# RUN virtualenv $CKAN_HOME && cd $CKAN_HOME && . bin/activatepaster --plugin=ckan search-index rebuild --config=/etc/ckan/std/std.ini && $CKAN_HOME/bin/paster make-config ckan ${CKAN_CONFIG}/${CONFIG_FILE}
 
 # Configure apache
 RUN a2dissite 000-default

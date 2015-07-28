@@ -44,7 +44,6 @@ ckan:
   volumes:
     - ./_config/custom_options.ini:/etc/ckan/default/custom_options.ini
     - ./_config/who.ini:/etc/ckan/default/who.ini
-    - ./_src:/usr/lib/ckan/default/src
     - ./_etc/supervisor/conf.d:/etc/supervisor/conf.d
 
 nginx:
