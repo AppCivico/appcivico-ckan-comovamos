@@ -90,6 +90,12 @@ do
   fi
 done
 
+mkdir -p $CKAN_DATA/resources || true
+mkdir -p $CKAN_DATA/storage/uploads/group || true
+
+chown www-data $CKAN_DATA/resources || true
+chown www-data $CKAN_DATA/storage/uploads/group || true
+
 # If we don't already have a who.ini symlink create it
 if [ ! -e "$CKAN_CONFIG/who.ini" ]; then
   echo "WARNING: my_init had to symlink who.ini again, please check that your volumes are set-up correctly"
