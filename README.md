@@ -130,9 +130,10 @@ Defines the set of services required to run CKAN. Read the [docker-compose.yml r
 # Usage for deploy a new instance
 
 1. Clone this repo and walk into the home directory.
-2. Clone the datapusher in `_service-provider`
-3. Set the full path of the volumes in docker-compose.yml
-4. Run `up` with Docker-compose or Vagrant
+1. `./unzip-sources.sh`    # decompress source code into the correct paths
+1. `./build-images.sh`     # build the Dockerfiles (go take a coffee)
+1. `./generate-configs.sh` # generate ckan.ini and copy an who.ini
+1. `docker-compose up`     # with Docker-compose or Vagrant
 
 
 ## Using Docker-compose (recommended)
