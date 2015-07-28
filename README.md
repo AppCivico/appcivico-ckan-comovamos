@@ -5,6 +5,38 @@ Developing and deploying CKAN with Docker, an http://appcivico.com/ implementati
 
 > this is a fork of https://github.com/ckan/ckan-docker but with some different directories and configuration.
 
+---
+# Usage for deploy a new instance
+
+1. Clone this repository and walk into the directory.
+1. `./unzip-sources.sh`    # decompress source code into the correct paths
+1. You should edit docker-compose.yml and change where you want to persist the data. default to ../data-mount
+1. `./build-images.sh`     # build the Dockerfiles (go take a coffee)
+1. `./generate-configs.sh` # generate `ckan.ini` and copy an `custom_config.ini` + `who.ini` into _config/
+1. `docker-compose up`     # with Docker-compose or Vagrant
+
+### CKAN instance mounts
+
+> defaults to:
+
+* ./_config/ will be mounted on /etc/ckan/default/
+* ./_config/apache.conf to /etc/ckan/default/apache.conf
+* ./_config/apache.wsgi to /etc/ckan/default/apache.wsgi
+* ./_etc/supervisor/conf.d to /etc/supervisor/conf.d
+
+### CKAN has more volumes from docker/data
+
+> defaults to:
+
+- ../data-mount/var-lib-ckan:/var/lib/ckan
+- ../data-mount/etc-postgres:/etc/postgresql/9.3/main
+- ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
+- ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
+
+Any modification on the right part of : should be avoided if you won't change Dockefiles or knowing what you are doing.
+
+> WARNING: do not use data-mount inside of this directory, or will have errors with Docker because of permissions.
+
 # Intro
 
 Dockerfiles, Docker-compose service definition to develop & deploy CKAN, Postgres, Solr & datapusher using Docker.
@@ -130,15 +162,6 @@ Read the [ckanext-spatial documentation](http://docs.ckan.org/projects/ckanext-s
 
 #### docker-compose.yml
 Defines the set of services required to run CKAN. Read the [docker-compose.yml reference](http://docs.docker.com/compose/yml/) to understand and edit.
-
----
-# Usage for deploy a new instance
-
-1. Clone this repo and walk into the home directory.
-1. `./unzip-sources.sh`    # decompress source code into the correct paths
-1. `./build-images.sh`     # build the Dockerfiles (go take a coffee)
-1. `./generate-configs.sh` # generate ckan.ini and copy an who.ini
-1. `docker-compose up`     # with Docker-compose or Vagrant
 
 ---
 ## Running commands inside the container
