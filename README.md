@@ -86,17 +86,15 @@ contains any service providers (e.g. datapusher) with their Dockerfiles. see _se
 #### docker
 contains the Dockerfiles and any supporting files
 
-#### vagrant
-contains the Docker host if the host cannot run Docker containers natively (OS X & Windows)
+#### source-codes
 
+containers ckan 2.4 and ckanext-pages
 
 ### Files
 
 #### Dockerfiles
 
 The Dockerfiles are currently based on `phusion/baseimage:0.9.16`.
-
-SSH is supported using an insecure key which is enabled by default for development purposes. You should disable it in production use for obvious reasons.
 
 [Read this to find out more about phusion baseimage](https://phusion.github.io/baseimage-docker/)
 
@@ -113,7 +111,7 @@ The database container runs Postgres 9.3 and PostGIS 2.1.
 It supports the [datastore](http://docs.ckan.org/en/latest/maintaining/datastore.html) & [ckanext-spatial](https://github.com/ckan/ckanext-spatial)
 
 ##### Data Dockerfile
-The data container is optional but recommended. It exposes two volumes to store the Postgres data `($PGDATA)` & CKAN FileStore. This means you can recreate / app containers without losing your data.
+It exposes two volumes to store the Postgres data `($PGDATA)` & CKAN FileStore AND Solr. This means you can recreate / app containers without losing your data.
 
 ##### Solr Dockerfile
 The Solr container runs version 4.10.1. This can easily be changed by customising SOLR_VERSION in the Dockerfile.
@@ -121,48 +119,18 @@ The Solr container runs version 4.10.1. This can easily be changed by customisin
 By detault the `schema.xml` of the upstream version (2.3) is copied in the container. This can be overriden at runtime by mounting it as a volume.
 This default path of the volume is `<path to>/_src/ckan/ckan/config/solr/schema.xml` so it mounts the schema corresponding to your version of CKAN.
 
-For example for Docker-compose:
-
-    solr:
-      build: docker/solr
-      hostname: solr
-      domainname: localdomain
-      ports:
-        - "8983:8983"
-      volumes:
-        - <path to>/_src/ckan/ckan/config/solr/schema.xml:/opt/solr/example/solr/ckan/conf/schema.xml
-
-If you need a custom schema, put it in `<full path to>/_solr` and change the path in the docker-compose or vagrant file.
-
-      volumes:
-        - <path to>/_solr/schema.xml:/opt/solr/example/solr/ckan/conf/schema.xml
-
-
 The container is cross version compatible. You need mount the appropriate `schema.xml` as a volume, or build a child image, which will copy the `schema.xml` next to your Dockerfile.
 
 Read the [ckanext-spatial documentation](http://docs.ckan.org/projects/ckanext-spatial/en) to add the required fields to your Solr schema if you use ckanext-spatial
 
-
-##### Docker-compose Dockerfile
-The Docker-compose container runs the latests Docker-compose & Docker within a container.
-
-The Docker socket needs to be mounted as a volume to control Docker on the host. A source folder must be mounted to access the docker-compose definition
-
-see docker/compose/Readme to find out how to use
-
-#### Vagrantfile
-Defines VMs provided by Docker, a Virtual Box docker-host is used if the host can't run Docker containers natively. This is an alternative to Boot2Docker.
-
 #### docker-compose.yml
 Defines the set of services required to run CKAN. Read the [docker-compose.yml reference](http://docs.docker.com/compose/yml/) to understand and edit.
 
-
-
 ---
-# Usage
+# Usage for deploy a new instance
 
-1. Clone your code in the `_src` directory (see _src/README)
-2. Clone the datapusher in `_service-provider` (see _service-provider/README)
+1. Clone this repo and walk into the home directory.
+2. Clone the datapusher in `_service-provider`
 3. Set the full path of the volumes in docker-compose.yml
 4. Run `up` with Docker-compose or Vagrant
 
