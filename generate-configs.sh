@@ -20,3 +20,8 @@ if [ ! -f _config/ckan.ini ]; then
        --tty --entrypoint='' ${COMPOSENAME}_ckan /bin/bash -c 'cd /usr/lib/ckan/default && virtualenv . && /usr/lib/ckan/default/bin/paster make-config ckan /etc/ckan/default/ckan.ini'
    docker rm ckan-generate-config-paster 1>/dev/null 2>/dev/null|| true
 fi
+
+if [ ! -f _config/custom_options.ini ]; then
+    echo "copying custom_options.ini to _config/"
+    cp _etc/ckan/custom_options.ini _config/
+fi
