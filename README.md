@@ -3,7 +3,7 @@ ckan-docker
 
 Developing and deploying CKAN with Docker, an http://appcivico.com/ implementation.
 
-# this is a fork of https://github.com/ckan/ckan-docker but with some different directories and configuration.
+> this is a fork of https://github.com/ckan/ckan-docker but with some different directories and configuration.
 
 # Intro
 
@@ -88,7 +88,12 @@ contains the Dockerfiles and any supporting files
 
 #### source-codes
 
-containers ckan 2.4 and ckanext-pages
+contains source zip code of:
+
+ * CKAN Release 2.4
+ * ckanext-pages     (master branch downloaded 2015-07-27, tested and is stable)
+ * datapusher        (stable branch downloaded 2015-07-28)
+
 
 ### Files
 
