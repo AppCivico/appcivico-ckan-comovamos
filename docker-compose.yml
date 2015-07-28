@@ -42,8 +42,9 @@ ckan:
   volumes_from:
     - data
   volumes:
-    - ./_config/custom_options.ini:/etc/ckan/default/custom_options.ini
-    - ./_config/who.ini:/etc/ckan/default/who.ini
+    - ./_config/:/etc/ckan/default/
+    - ./_etc/apache2/apache.conf:/etc/ckan/default/apache.conf
+    - ./_etc/apache2/apache.wsgi:/etc/ckan/default/apache.wsgi
     - ./_etc/supervisor/conf.d:/etc/supervisor/conf.d
 
 nginx:
