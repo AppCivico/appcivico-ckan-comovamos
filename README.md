@@ -1,27 +1,28 @@
 ckan-docker
 ===========
 
-Developing and deploying CKAN with Docker
+Developing and deploying CKAN with Docker, an http://appcivico.com/ implementation.
 
-
+# this is a fork of https://github.com/ckan/ckan-docker but with some different directories and configuration.
 
 # Intro
 
-Dockerfiles, Docker-compose service definition & Vagrantfile to develop & deploy CKAN, Postgres, Solr & datapusher using Docker.
+Dockerfiles, Docker-compose service definition to develop & deploy CKAN, Postgres, Solr & datapusher using Docker.
 
 Docker containers included:
 
 - CKAN (should work with any version 2.x)
 - Postgres (Postgres 9.3 and PostGIS 2.1, CKAN datastore & spatial extension supported)
 - Solr (4.10.1, custom schemas & spatial extension supported)
-- Docker-compose _[optional]_ (to manage the containers)
-- Data _[optional]_ (to store Postgres data & CKAN FileStore separately)
+- Docker-compose (to manage run containers on developts)
+- Data into a diferent directory (to store Postgres data & CKAN FileStore & Solr separately)
+- Bash script to make config and build directories after instances run.
 
 
 Other contrib containers:
 
 - Nginx (1.7.6 official) as a caching reverse proxy
-- Datapusher
+- Datapusher configured to work with the CKAN instance
 
 
 # Requirements
@@ -30,8 +31,7 @@ Other contrib containers:
 |:--------------|:-------------:|:----------------------------------------------|
 |Docker			|>= 1.3 		|works with Boot2docker 1.3						|
 |Docker-compose		|>= 1.1.0 		|on the host or with Dockerfile provided		|
-|Vagrant		|>= 1.6 		|if you intend to use Vagrant					|
-|OS				|any	 		|as long as you can run Docker 1.3				|
+|OS				|any linux 		|as long as you can run Docker 1.3				|
 
 
 
@@ -41,7 +41,6 @@ Other contrib containers:
 
 	├── Dockerfile (CKAN Dockerfile)
 	├── README.md
-	├── Vagrantfile (CKAN Vagrantfile)
 	├── _etc (config copied to /etc)
 	│   ├── apache2
 	│   ├── ckan
@@ -56,6 +55,7 @@ Other contrib containers:
 	├── _src (CKAN source code & extensions)
 	│   ├── ckan
 	│   └── ckanext-...
+    ├── source-codes/ with zip tarballs for ckan 2.4 and pages
 	├── docker
 	│   ├── ckan
 	│   ├── data
@@ -64,9 +64,8 @@ Other contrib containers:
 	│   ├── insecure_key (baseimage insecure SSH key)
 	│   ├── postgres
 	│   └── solr
-	├── docker-compose.yml (CKAN services definition)
-	└── vagrant
-	    └── docker-host (Linux Docker host if required)
+	└── docker-compose.yml (CKAN services definition)
+
 
 ### Directories
 

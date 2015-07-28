@@ -3,10 +3,10 @@ data:
   hostname: data
   domainname: localdomain
   volumes:
-    - /home/renato/projetos/aware/data-mount/var-lib-ckan:/var/lib/ckan
-    - /home/renato/projetos/aware/data-mount/etc-postgres:/etc/postgresql/9.3/main
-    - /home/renato/projetos/aware/data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
-    - /home/renato/projetos/aware/data-mount/solr-data:/opt/solr/example/solr/ckan/data
+    - ../data-mount/var-lib-ckan:/var/lib/ckan
+    - ../data-mount/etc-postgres:/etc/postgresql/9.3/main
+    - ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
+    - ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
 
 postgres:
   build: docker/postgres
