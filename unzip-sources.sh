@@ -16,7 +16,7 @@ unzip -qo ckanext-pages-master.zip && rm ckanext-pages-master.zip
 unzip -qo ckan-2.4.0.zip && rm ckan-2.4.0.zip
 echo "datapusher..."
 cp $__dir/source-codes/datapusher-stable.zip $__dir/_service-provider/
-rm -rf $__dir/_service-provider/_datapusher
+rm -rf $__dir/_service-provider/datapusher
 cd $__dir/_service-provider/
 unzip -qo datapusher-stable.zip && rm datapusher-stable.zip
 mv datapusher-stable datapusher
