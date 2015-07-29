@@ -37,6 +37,12 @@ Any modification on the right part of : should be avoided if you won't change Do
 
 > WARNING: do not use data-mount inside of this directory, or will have errors with Docker because of permissions.
 
+> WARNING: if you don't have the database initialized yet, you have to run the postgres container before CKAN, otherwise, you can get postgres dump not complete.
+
+    docker-compose -f docker-compose-data-and-postgres.yml  up
+
+wait for the last "CREATE ROLE" appear and press CTRL+C to shutdown.
+
 ---
 
 ## Adding a admin user
