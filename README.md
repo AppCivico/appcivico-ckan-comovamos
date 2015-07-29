@@ -13,7 +13,7 @@ Developing and deploying CKAN with Docker, an http://appcivico.com/ implementati
 1. You should edit docker-compose.yml and change where you want to persist the data. default to ../data-mount
 1. `./build-images.sh`     # build the Dockerfiles (go take a coffee)
 1. `./generate-configs.sh` # generate `ckan.ini` and copy an `custom_config.ini` + `who.ini` into _config/
-1. `docker-compose up`     # with Docker-compose or Vagrant
+1. `docker-compose up --no-recreate -d`
 
 ### CKAN instance mounts
 

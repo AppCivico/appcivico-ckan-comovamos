@@ -7,7 +7,7 @@ data:
     - ../data-mount/etc-postgres:/etc/postgresql/9.3/main
     - ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
     - ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
-    - ../data-mount/datapusher/job_store.db:/job_store.db
+    - ../data-mount/datapusher/:/datapusher/
 
 postgres:
   build: docker/postgres
