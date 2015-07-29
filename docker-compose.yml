@@ -39,7 +39,7 @@ ckan:
   domainname: eokoe.com
   links:
     - postgres:postgres
-    - solr:solr-datapqr
+    - solr:solr
     - datapusher:datapusher
   command: /sbin/my_init
   volumes_from:
