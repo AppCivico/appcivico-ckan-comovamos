@@ -60,6 +60,7 @@ if [[ ! -e "$PGDATA/db_configured" ]]; then
 EOF
     # Database configured
     touch $PGDATA/db_configured
+    touch /var/lib/ckan/db-is-ready
   }
 else
   init_db () {

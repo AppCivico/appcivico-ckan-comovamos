@@ -90,6 +90,11 @@ do
   fi
 done
 
+while [ ! -f /var/lib/ckan/db-is-ready ]
+do
+  sleep 2
+done
+
 mkdir -p $CKAN_DATA/resources || true
 mkdir -p $CKAN_DATA/storage/uploads/group || true
 
