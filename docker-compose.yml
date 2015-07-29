@@ -7,6 +7,7 @@ data:
     - ../data-mount/etc-postgres:/etc/postgresql/9.3/main
     - ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
     - ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
+    - ../data-mount/datapusher/job_store.db:/tmp/job_store.db
 
 postgres:
   build: docker/postgres
@@ -29,11 +30,13 @@ datapusher:
   build: _service-provider/
   hostname: datapusher
   domainname: localdomain
+  volumes_from:
+    - data
 
 ckan:
   build: .
-  hostname: ckan
-  domainname: localdomain
+  hostname: comovamos
+  domainname: eokoe.com
   links:
     - postgres:postgres
     - solr:solr
@@ -49,8 +52,8 @@ ckan:
 
 nginx:
   build: docker/nginx
-  hostname: nginx
-  domainname: localdomain
+  hostname: nginx-ckan
+  domainname: eokoe.com
   links:
     - ckan:ckan
   ports:
