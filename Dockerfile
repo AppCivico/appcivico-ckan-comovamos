@@ -5,6 +5,7 @@ MAINTAINER Open Knowledge
 RUN locale-gen en_US.UTF-8 && \
     echo 'LANG="en_US.UTF-8"' > /etc/default/locale
 
+RUN echo "NoOp"
 RUN apt-get -qq update
 
 # Install required packages
