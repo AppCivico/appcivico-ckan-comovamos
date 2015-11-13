@@ -1,0 +1,59 @@
+<footer>
+      <div class="border__flag"></div>
+      <div class="container">
+        <div class="footer__logo"><img src="http://wp-comovamos.eokoe.com/wp-content/themes/corona/images/logo_footer.png" alt=""></div>
+
+        <div class="links col-lg-2 col-md-2">
+          <p class="links__title">Datos Abiertos</p>
+          <ul>
+            <li><a>Replicas</a></li>
+            <li><a>Termos de Uso</a></li>
+            <li><a>Politicas y Privacidad</a></li>
+          </ul>
+        </div>
+
+
+        <div class="links col-lg-3 col-md-3">
+          <p class="links__title">Ciudades CómoVamos</p>
+          <ul>
+            <li><a href="http://wp-comovamos.eokoe.com/datos/">Conoce los Datos</a></li>
+            <li><a href="http://wp-comovamos.eokoe.com/historias/">Historia</a></li>
+            <li><a href="http://wp-comovamos.eokoe.com/tutoriales/">Tutoriales</a></li>
+
+          </ul>
+        </div>
+        <div class="links col-lg-4 col-md-4">
+          <p class="links__title">Fundación Corona</p>
+          <p class="address">Calle 70 # 7-30 Bogotá, Colombia </p>
+          <p class="address">Tel: (57+1) 4000031</p>
+          <p class="address">Información: comunicaciones@fcorona.org </p>
+          <p class="address">Línea Ética: seamosintegrosfundacion@fcorona.org</p>
+        </div>
+
+      </div>
+
+<div class="container">
+        <div class="links col-lg-2 col-md-2">
+          <p class="links__title">CKAN</p>
+          <ul>
+            {% block footer_links %}
+              <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
+            {% endblock %}
+            {% block footer_links_ckan %}
+              {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+              <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+              <li><a href="http://www.okfn.org/">{{ _('Open Knowledge Foundation') }}</a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}"></a></li>
+            {% endblock %}
+
+            <li>
+                 <div class="attribution">
+        {% block footer_attribution %}
+          <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>
+        {% endblock %}
+      </div>
+  </li>
+          </ul>
+        </div>
+        </div>
+    </footer>

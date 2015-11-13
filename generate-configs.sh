@@ -9,7 +9,7 @@ COMPOSENAME=$(echo "$COMPOSENAME" |  tr -cd 'A-Za-z0-9')
 
 if [ ! -f _config/who.ini ]; then
     echo "copying who.ini to _config/"
-    cp _src/ckan-ckan-2.4.0/who.ini _config/
+    cp _src/ckan-release-v2.3.1/who.ini _config/
 fi
 
 if [ ! -f _config/ckan.ini ]; then

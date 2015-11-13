@@ -8,6 +8,7 @@ data:
     - ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
     - ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
     - ../data-mount/datapusher/:/datapusher/
+    - ./custom/templates/:/usr/lib/ckan/default/src/ckan-release-v2.3.1/ckan/templates
 
 postgres:
   build: docker/postgres
@@ -59,6 +60,7 @@ nginx:
   ports:
     - "6002:80"
   volumes:
+    - ./custom/nginx-static/:/ckan-static/
     - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
 
 

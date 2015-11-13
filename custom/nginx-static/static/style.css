@@ -1,0 +1,140 @@
+/*
+Theme Name: Corona
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: the Eokoe team
+Author URI: http://eokoe.com/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,800);
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+ul {
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    font-family: Raleway;
+    font-weight: 400;
+
+    box-sizing: border-box;
+}
+
+footer {
+    position: relative;
+
+    margin-top: 0px;
+
+    padding-top: 85px;
+    padding-bottom: 130px;
+
+    background-color: #f6f6f6;
+}
+
+footer .border__flag {
+    position: absolute;
+    top: 0;
+
+
+    width: 100%;
+    height: 2px;
+
+    background: transparent url('/static/border_flag.jpg') center center scroll repeat-x;
+}
+footer .footer__logo {
+    float: left;
+
+    width: 173px;
+}
+footer .links {
+    font-size: 12px;
+
+    color: #999;
+}
+footer .links__title {
+    font-size: 17px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    color: #644b8e;
+}
+footer .links a {
+    color: #999;
+}
+footer .links .address {
+    line-height: 17px;
+
+    margin: 0;
+}
+
+div[role=main] {
+    background: #2a3339 url('/static/destaque.png') bottom center scroll no-repeat;
+}
+
+.homepage [role=main] {
+    background: transparent;;
+}
+
+.toolbar .breadcrumb a {
+    color: white;
+}
+.breadcrumb>li {
+
+    text-shadow: 0 1px 0 black;
+}
+.toolbar .breadcrumb li:after { color: white}
+
+
+header.navbar-static-top  {
+    position: relative;
+    z-index: 100;
+
+    margin-bottom: 0px;
+
+
+    background: #3f4eac;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #3f4eac), color-stop(100%, #6c2784));
+    background: -webkit-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
+    background: -o-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
+    background: linear-gradient(to right, #3f4eac 0%, #6c2784 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4eac', endColorstr='#6c2784',GradientType=1 );
+}
+
+.account-masthead {
+    background: #3f4eac;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #3f4eac), color-stop(100%, #6c2784));
+    background: -webkit-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
+    background: -o-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
+    background: linear-gradient(to right, #3f4eac 0%, #6c2784 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4eac', endColorstr='#6c2784',GradientType=1 );
+}
+
+body {
+    background: none;
+    background: #2A3339 !important;
+}
+
+.attribution .ckan-footer-logo { background-color: #637ABD}
