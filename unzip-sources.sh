@@ -23,3 +23,5 @@ rm -rf $__dir/_service-provider/datapusher
 cd $__dir/_service-provider/
 unzip -qo datapusher-stable.zip && rm datapusher-stable.zip
 mv datapusher-stable datapusher
+echo "configuring datapusher..."
+perl -pi -e 's|/tmp/|/root/datapusher/|' datapusher/deployment/datapusher_settings.py
