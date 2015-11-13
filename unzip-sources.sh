@@ -17,11 +17,13 @@ rm -rf $__dir/ckan-release-v2.3.1
 rm -rf $__dir/ckanext-pages-master
 unzip -qo ckanext-pages-master.zip && rm ckanext-pages-master.zip
 unzip -qo release-v2.3.1.zip && rm release-v2.3.1.zip
-echo "datapusher..."
-cp $__dir/source-codes/datapusher-stable.zip $__dir/_service-provider/
+
+echo "unzip datapusher..."
+cp $__dir/source-codes/datapusher-006.tar.gz $__dir/_service-provider/
 rm -rf $__dir/_service-provider/datapusher
 cd $__dir/_service-provider/
-unzip -qo datapusher-stable.zip && rm datapusher-stable.zip
-mv datapusher-stable datapusher
+tar -xf datapusher-006.tar.gz && rm datapusher-006.tar.gz
+mv datapusher-0.0.6 datapusher
+
 echo "configuring datapusher..."
 perl -pi -e 's|/tmp/|/root/datapusher/|' datapusher/deployment/datapusher_settings.py
