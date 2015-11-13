@@ -1,6 +1,7 @@
 FROM phusion/baseimage:0.9.16
 MAINTAINER Open Knowledge
 
+RUN echo "NoOp"
 # set UTF-8 locale
 RUN locale-gen en_US.UTF-8 && \
     echo 'LANG="en_US.UTF-8"' > /etc/default/locale
