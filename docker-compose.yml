@@ -7,7 +7,7 @@ data:
     - ../data-mount/etc-postgres:/etc/postgresql/9.3/main
     - ../data-mount/var-lib-postgres/:/var/lib/postgresql/9.3/main
     - ../data-mount/solr-data:/opt/solr/example/solr/ckan/data
-    - ../data-mount/datapusher/:/datapusher/
+    - ../data-mount/datapusher/:/root/datapusher
     - ./custom/templates/:/usr/lib/ckan/default/src/ckan-release-v2.3.1/ckan/templates
 
 postgres:
