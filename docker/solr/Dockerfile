@@ -24,8 +24,6 @@ RUN tar zxf $SOLR.tgz -C /opt/solr --strip-components 1
 # Install CKAN Solr core
 RUN cp -R $SOLR_HOME/collection1/ $SOLR_HOME/ckan/
 RUN echo name=ckan > $SOLR_HOME/ckan/core.properties
-ADD schema.xml $SOLR_HOME/ckan/conf/schema.xml
-ONBUILD COPY schema.xml $SOLR_HOME/ckan/conf/schema.xml
 
 # Configure runit
 ADD ./svc /etc/service/
@@ -38,3 +36,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* $SOLR.tgz
 
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+
+ADD schema-copy.xml $SOLR_HOME/ckan/conf/schema.xml
+ADD schema-copy.xml $SOLR_HOME/ckan/conf/schema-copy.xml
+ONBUILD COPY schema-copy.xml $SOLR_HOME/ckan/conf/schema.xml
+ONBUILD COPY schema-copy.xml $SOLR_HOME/ckan/conf/schema-copy.xml
