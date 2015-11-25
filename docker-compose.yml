@@ -24,10 +24,11 @@ solr:
   build: docker/solr
   hostname: solr
   domainname: localdomain
-  volumes:
-    - ./_config/schema.xml:/opt/solr/example/solr/ckan/conf/schema.xml
   volumes_from:
     - data
+  volumes:
+    - ./_config/schema.xml:/opt/solr/example/solr/ckan/conf/schema.xml
+    - ./_config/schema.xml:/opt/solr/example/solr/ckan/conf/schema-test-mount.xml
 
 datapusher:
   build: _service-provider/
