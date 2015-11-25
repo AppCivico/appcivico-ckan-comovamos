@@ -25,8 +25,3 @@ if [ ! -f _config/custom_options.ini ]; then
     echo "copying custom_options.ini to _config/"
     cp _etc/ckan/custom_options.ini _config/
 fi
-
-if [ ! -f  _config/schema.xml ]; then
-    echo "copying schema.xml to _config/"
-    cp source-codes/schema-2.3.1.xml _config/
-fi
