@@ -25,7 +25,7 @@ RUN virtualenv $DATAPUSHER_HOME
 ADD datapusher $DATAPUSHER_HOME/src/datapusher
 RUN pip install pip==1.4.1
 RUN pip install -r $DATAPUSHER_HOME/src/datapusher/requirements.txt
-RUN pip install -y flask-login==0.2.11
+RUN pip install flask-login==0.2.11
 
 WORKDIR $DATAPUSHER_HOME/src/datapusher/
 EXPOSE 8800
