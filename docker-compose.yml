@@ -36,8 +36,8 @@ datapusher:
 
 ckan:
   build: .
-  hostname: comovamos
-  domainname: eokoe.com
+  hostname: datos
+  domainname: ciudatos.com
   links:
     - postgres:postgres
     - solr:solr
@@ -54,7 +54,7 @@ ckan:
 nginx:
   build: docker/nginx
   hostname: nginx-ckan
-  domainname: eokoe.com
+  domainname: ciudatos.com
   links:
     - ckan:ckan
   ports:
