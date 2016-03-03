@@ -113,23 +113,13 @@ header.navbar-static-top  {
     margin-bottom: 0px;
 
 
-    background: #3f4eac;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #3f4eac), color-stop(100%, #6c2784));
-    background: -webkit-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
-    background: -o-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
-    background: linear-gradient(to right, #3f4eac 0%, #6c2784 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4eac', endColorstr='#6c2784',GradientType=1 );
+    background: #407f69;
+
 }
 
 .account-masthead {
-    background: #3f4eac;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #3f4eac), color-stop(100%, #6c2784));
-    background: -webkit-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
-    background: -o-linear-gradient(left, #3f4eac 0%, #6c2784 100%);
-    background: linear-gradient(to right, #3f4eac 0%, #6c2784 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4eac', endColorstr='#6c2784',GradientType=1 );
+    background: #407f69;
+
 }
 
 body {
