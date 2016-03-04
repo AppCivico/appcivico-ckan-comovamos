@@ -104,3 +104,7 @@ body {
 }
 
 .attribution .ckan-footer-logo { background-color: #637ABD}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+    background-color: #7dc368;
+}
