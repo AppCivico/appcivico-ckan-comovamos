@@ -90,7 +90,7 @@ header.navbar-static-top  {
     position: relative;
     z-index: 100;
 
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     background: #407f69;
 }
 
@@ -109,9 +109,9 @@ body {
     background-color: #7dc368;
 }
 .wrapper{
-    border-radius: none;
-    -moz-border-radius:none;
-    -webkit-border-radius: none;
+    border-radius: 0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius: 0px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;}
