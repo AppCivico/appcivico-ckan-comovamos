@@ -93,6 +93,11 @@ header.navbar-static-top  {
     margin: 10px 0;
     background: #407f69;
 }
+.navbar .nav > .active > a:focus{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
 
 .account-masthead {
     background: #376d5a;
