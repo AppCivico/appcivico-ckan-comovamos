@@ -108,7 +108,7 @@ body {
 .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
     background-color: #7dc368;
 }
-..wrapper{
+.wrapper{
     border-radius: none;
     -moz-border-radius:none;
     -webkit-border-radius: none;
