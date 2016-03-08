@@ -93,7 +93,7 @@ header.navbar-static-top  {
     margin: 10px 0;
     background: #407f69;
 }
-.navbar .nav > .active > a:focus{
+.navbar .nav > .active > a:focus, .masthead .nav > li > a{
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
