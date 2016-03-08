@@ -115,3 +115,4 @@ body {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;}
+.account-masthead .account ul li{border-left: none;}
