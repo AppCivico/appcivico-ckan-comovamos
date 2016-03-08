@@ -94,9 +94,9 @@ header.navbar-static-top  {
     background: #407f69;
 }
 .navbar .nav > .active > a:focus, .masthead .nav > li > a{
-  box-shadow: inset 0 3px 8px rgba(0,0,0,0);
-  -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0);
-  -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0);
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
+  -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
 }
 
 .account-masthead {
