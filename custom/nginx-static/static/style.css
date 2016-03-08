@@ -108,3 +108,10 @@ body {
 .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
     background-color: #7dc368;
 }
+..wrapper{
+    border-radius: none;
+    -moz-border-radius:none;
+    -webkit-border-radius: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
