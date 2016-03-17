@@ -90,12 +90,17 @@ header.navbar-static-top  {
     position: relative;
     z-index: 100;
 
-    margin-bottom: 0px;
+    margin: 10px 0;
     background: #407f69;
+}
+.navbar .nav > .active > a:focus, .masthead .nav > li > a{
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
+  -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0)!important;
 }
 
 .account-masthead {
-    background: #407f69;
+    background: #376d5a;
 }
 
 body {
@@ -108,3 +113,11 @@ body {
 .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
     background-color: #7dc368;
 }
+.wrapper{
+    border-radius: 0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
+.account-masthead .account ul li{border-left: none;}
