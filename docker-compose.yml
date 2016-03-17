@@ -54,7 +54,7 @@ ckan:
 nginx:
   build: docker/nginx
   hostname: nginx-ckan
-  domainname: gastosabertos.com
+  domainname: dados.gastosabertos.org
   links:
     - ckan:ckan
   ports:
