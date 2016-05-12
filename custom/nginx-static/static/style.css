@@ -55,7 +55,7 @@ footer .footer__logo {
 
     width: 173px;
 }
-footer .links {
+footer .links, footer .links a {
     font-size: 12px;
 
     color: #999;
