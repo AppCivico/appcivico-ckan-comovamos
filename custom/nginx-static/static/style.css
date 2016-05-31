@@ -43,11 +43,10 @@ body {
 footer {
     position: relative;
     margin-top: 0px;
-
-    padding-top: 20px;
-    padding-bottom: 80px;
-
-    background-color: #376d5a;
+	padding-bottom: 80px;
+	background-color: white;
+    background: #eeeeee url("../../../base/images/bg.png");
+}
 }
 
 footer .footer__logo {
@@ -122,11 +121,13 @@ body {
     box-shadow: none;}
 .account-masthead .account ul li{border-left: none;}
 .folow-ga{
-	background-image: url(http://gastosabertos.org/wp-content/themes/gastos-abertos/img/city_bg.jpg) no-repeat center;
+	background-image: url(http://gastosabertos.org/wp-content/themes/gastos-abertos/img/city_bg.jpg);
 	color: #FFFFFF;
-	height: 16.5625rem;
+	height: 250px;
 	background-size: 100% auto;
 	position: relative;
 	padding-top: 4.0625rem;
 	text-align: center;
+    background-position: 0 -51px;
+}
 }
