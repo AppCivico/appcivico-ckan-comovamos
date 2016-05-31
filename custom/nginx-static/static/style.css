@@ -123,7 +123,6 @@ body {
 .folow-ga{
 	background-image: url(http://gastosabertos.org/wp-content/themes/gastos-abertos/img/city_bg.jpg);
 	color: #FFFFFF;
-	height: 250px;
 	background-size: 100% auto;
 	position: relative;
 	padding-top: 4.0625rem;
@@ -133,4 +132,7 @@ body {
 }
 .folow-ga img{
 	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	margin: 5% 0px;
 }
