@@ -136,5 +136,5 @@ body {
 	height: auto;
 	margin: 5% 0px;
 }
-.ok-footer-link img{ width: max-width: 300px; }
+.ok-footer-link img{  max-width: 300px; }
 .ok-footer-link{display: inline-block}
