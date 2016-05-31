@@ -45,7 +45,8 @@ footer {
     margin-top: 0px;
 	background-color: white;
     /*background: #eeeeee url("../../../base/images/bg.png");*/
-    color: #aaaaaa
+    color: #aaaaaa;
+    font-size: 11px
 }
 }
 
