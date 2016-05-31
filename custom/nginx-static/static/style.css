@@ -44,7 +44,7 @@ footer {
     position: relative;
     margin-top: 0px;
 	background-color: white;
-    /*background: #eeeeee url("../../../base/images/bg.png");*/
+	background: #eeeeee url("../../../base/images/bg.png");
     color: #aaaaaa;
     font-size: 11px
 }
@@ -138,5 +138,5 @@ body {
 }
 .ok-footer-link img{  max-width: 300px; }
 .ok-footer-link{display: inline-block}
-.liks-footer-pequenos img{max-height: 44px;}
+.liks-footer-pequenos img{max-height: 34px;}
 .liks-footer-pequenos a{display: block;}
